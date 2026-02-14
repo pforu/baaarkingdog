@@ -5,7 +5,7 @@ from collections import deque
 N, M, K = map(int, input().split())
 board = [input().strip() for _ in range(N)]
 DIRS = ((1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1))
-d = dict()
+d = dict() # 주어진 수 범위 보고 미리 저장해놓는 것 떠올리기 (K=1000)
 Q = deque()
 
 for i in range(N):
