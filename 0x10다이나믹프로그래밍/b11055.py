@@ -8,6 +8,9 @@ arr = [0] + list(map(int, input().split()))
 d = [0] + [0]*N
 for i in range(1, N+1):
     for j in range(i-1, -1, -1):
+        # 내 앞에 나보다 작은 놈들 중, 누구 뒤에 붙는 게 합이 제일 크지?
+        # 현재 상태가 이전의 모든 상태에 의존
+        # 꼭 뒤에서부터 돌 필요 없음 
         if arr[j]<arr[i]:
             d[i] = max(d[i], d[j] + arr[i])
             # break이 아니라, 다 보면서 d[j]가 제일 큰 걸 찾아야 함 

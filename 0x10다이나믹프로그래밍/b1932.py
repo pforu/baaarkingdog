@@ -7,6 +7,7 @@ board = [list(map(int, input().split())) for _ in range(N)]
 d = [board[0][0]]
 for i in range(1, N):
     tmp = [d[0] + board[i][0]] + [0]*(i-1) + [d[-1] + board[i][-1]]
+    # 양끝 예외처리 
     for j in range(1, i):
         tmp[j] = max(d[j-1], d[j]) + board[i][j]
     d = tmp[:]

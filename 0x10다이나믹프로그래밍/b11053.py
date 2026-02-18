@@ -14,3 +14,24 @@ for i in range(1, N+1):
             d[i] = max(d[i], d[j]+1)
 
 print(max(d))
+
+
+
+# 이분탐색의 nlogn 코드 존재
+# from bisect import bisect_left
+
+# N = int(input())
+# arr = list(map(int, input().split()))
+
+# stack = [arr[0]]
+
+# for i in range(1, N):
+#     if arr[i] > stack[-1]: 
+#         stack.append(arr[i]) # 크면 그냥 붙이기 
+#     else:
+#         # stack 안에서 arr[i]가 들어갈 자리를 이분 탐색으로 찾음
+#         idx = bisect_left(stack, arr[i])
+#         stack[idx] = arr[i] # 덮어씌우기
+#         # 결국 더 작은 수로 덮어씌워짐, 가능성이 무조건 늘어남 
+
+# print(len(stack))
