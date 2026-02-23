@@ -23,7 +23,7 @@ while t <= 1130:
     found_flower = False
     
     # 2. 현재 시간(t) 이전에 시작하는 꽃들 중 가장 늦게 지는 꽃 찾기
-    # idx를 초기화하지 않고 계속 이어서 가기 때문에 O(N)입니다.
+    # idx를 초기화하지 않고 계속 이어서 가기 때문에 O(N)
     while idx < N: # 가능한 후보군 중 가장 늦게 지는 걸로 갱신 
         if arr[idx][0] <= t:
             if arr[idx][1] > nxt_t:

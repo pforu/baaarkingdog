@@ -1,4 +1,4 @@
-
+import array
 V, E = 5, 7
 
 # 보통 1-indexed 사용
@@ -22,7 +22,7 @@ for _ in range(E):
 
 ### 인접 리스트
 # 대부분의 표준 상황에 적합 
-adj_list = [[] for _ in range(V+1)]
+adj_list = array.array([[] for _ in range(V+1)])
 
 # 방향 그래프
 for _ in range(E):
